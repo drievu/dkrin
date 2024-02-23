@@ -25,7 +25,7 @@
     "backend": "nodemon backend/app.js",
     "frontend": "npm start --prefix frontend",
     "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
-    "build": "concurrently \"npm run backend\" \"cd frontend && npm start\""
+    "build": "concurrently \"npm run backend\" \"cd frontend && react-scripts build\""
   },
   "dependencies": {
     "nodemon": "^3.0.3"
