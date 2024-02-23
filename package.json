@@ -24,10 +24,10 @@
     "client": "cd frontend && npm start",
     "backend": "nodemon backend/app.js",
     "frontend": "npm start --prefix frontend",
-    "dev": "concurrently \"npm run backend\" \"npm run frontend\""
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "build": "concurrently \"npm run backend\" \"react-scripts build frontend\""
   },
   "dependencies": {
     "nodemon": "^3.0.3"
   }
 }
-
