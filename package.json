@@ -3,20 +3,31 @@
   "version": "1.0.0",
   "description": "DKRIN Website",
   "main": "index.js",
-  "scripts": {
-    "test": "dev"
-  },
   "repository": {
     "type": "git",
-    "url": "dkrin-website"
+    "url": "https://github.com/drievu/dkrin"
   },
   "keywords": [
     "dkrin"
   ],
   "author": "nimish",
   "license": "ISC",
+
+
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "scripts": {
+    "start": "node backend/app.js",
+    "server": "concurrently \"npm run start\" \"cd frontend && npm start\"",
+    "client-install": "cd frontend && npm install",
+    "client": "cd frontend && npm start",
+    "backend": "nodemon backend/app.js",
+    "frontend": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\""
+  },
   "dependencies": {
-    "concurrently": "^8.2.2",
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.0.3"
   }
 }
+
